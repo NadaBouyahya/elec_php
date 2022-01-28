@@ -1,0 +1,24 @@
+
+variable:	cons; amount;
+
+begin
+	if ( cons <= 150) 
+       begin
+	   if (cons <= 100) 
+           begin
+           amount = cons * 0,794
+           end
+       else
+           begin
+           amount = (100 * 0,794) + ((cons - 100) * 0,883)
+           end
+       end
+   else
+	begin
+        if (cons <= 210)
+          begin
+          amount = (210 * 0,9451) + ((cons - 210) * 1,0489)
+          end
+        else if (cons <= 310)
+          begin
+
