@@ -1,5 +1,5 @@
 
-variable:	cons; amount;
+variable:	cons, amount, TVA, callib_tarif : float; callibre : string 
 
 begin
 	if ( cons <= 150) 
@@ -17,8 +17,40 @@ begin
 	begin
         if (cons <= 210)
           begin
-          amount = (210 * 0,9451) + ((cons - 210) * 1,0489)
+          amount = cons * 0.9451;
           end
         else if (cons <= 310)
           begin
+          amount = (210 * 0,9451)* + ((cons - 210) * 1,0489)
+          amount = amount*TVA
+          end 
+        else if (cons <= 510)
+          begin
+          amount = (210 * 0,9451) + (100 * 1,0489) + ((cons - 210) * 1,2915)
+          end
+        else 
+          begin
+          amount = (210*0,9451) + (100 * 1,0489) + (210 * 1,2915) + ((cons - 510) * 1,4975)
+          end
+end
+  amount = amount + amount*TVA;
+  
+begin
+  if (callibre == small)
+    begin
+    amount = amount + 22.65 + (22.65 * TVA)
+    end
+  else if (callibre == medium)
+    begin
+    amount = amount + 37.05 + (37.05 * TVA)
+    end
+  else 
+    begin 
+    amount = amount + 46.20 + (46.20 * TVA)
+    end
+end
+  
+
+     
+
 

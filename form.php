@@ -7,16 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-
-    ?>
     <form action="data.php" method ="post">
         <input type="text" placeholder="Ancien index:" name="in1">
-        <input type="text" placeholder="Nouvel index:" name="in2">
+        <input type="text" placeholder="Nouvel index:" name="in2" >
         <select name="calibre">
             <option value=""></option>
         </select>
         <input type="submit" value="calcul">
     </form>
+    <?php
+   
+    ?>
 </body>
 </html>

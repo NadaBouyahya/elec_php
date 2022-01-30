@@ -1,6 +1,7 @@
 <?php
 $Ancien = $_POST["in1"];
 $Nouvel = $_POST["in2"];
-$Consomation = $Ancien - $Nouvel;
-
-echo 'Consomation: ' . $Consomation;
+$Consomation = $Nouvel - $Ancien;  
+echo 'lol';
+    // echo 'Consomation: ' . $Consomation;
+?>
