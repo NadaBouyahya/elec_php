@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="data.php" method ="post">
-        <input type="text" placeholder="Ancien index:" name="in1">
-        <input type="text" placeholder="Nouvel index:" name="in2" >
-        <select name="calibre">
-            <option value=""></option>
-        </select>
+    <form action="data.php" method ="POST">
+        <input type="text" placeholder="Ancien index:" name="ancien_index">
+        <input type="text" placeholder="Nouvel index:" name="nouvel_index">
+        <input type="radio" value="small" name="calibre">small<br>
+        <input type="radio" value="medium" name="calibre">medium<br>
+        <input type="radio" value="large" name="calibre">large <br>
         <input type="submit" value="calcul">
     </form>
     <?php
